@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Exquisite Jewels | Pago Seguro 2026</title>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 <style>
@@ -125,6 +126,7 @@ border-radius: 15px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
+/* BOTÓN WHATSAPP */
 .wsp-fijo {
 position: fixed;
 bottom: 25px;
@@ -139,6 +141,29 @@ align-items: center;
 justify-content: center;
 font-size: 40px;
 text-decoration: none;
+}
+
+/* BOTÓN TIKTOK */
+.tiktok-fijo {
+position: fixed;
+bottom: 110px;
+right: 25px;
+background: #000;
+color: white;
+width: 70px;
+height: 70px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 35px;
+text-decoration: none;
+transition: 0.3s;
+}
+
+.tiktok-fijo:hover {
+background: #ff0050;
+transform: scale(1.1);
 }
 
 footer {
@@ -188,22 +213,11 @@ margin-top: 50px;
 <button class="btn-abrir-qr" onclick="mostrarQR()">PAGAR POR YAPE</button>
 </div>
 
-<!-- ARETES (ARREGLADO + QR AL LADO) -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b">
 <h2>ARETES</h2>
 <div class="price">S/ 320.00</div>
-
-<div style="display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap;">
-  
-<button class="btn-abrir-qr" onclick="mostrarQR()" style="width:auto;">
-PAGAR POR YAPE
-</button>
-
-<!-- TU QR -->
-
-
-</div>
+<button class="btn-abrir-qr" onclick="mostrarQR()">PAGAR POR YAPE</button>
 </div>
 
 </div>
@@ -233,6 +247,12 @@ style="background: var(--wsp); color: white; padding: 15px; display: block; bord
 </div>
 </div>
 
+<!-- BOTÓN TIKTOK -->
+<a href="https://www.tiktok.com/@exquisitejewels.com" class="tiktok-fijo" target="_blank">
+<i class="bi bi-tiktok"></i>
+</a>
+
+<!-- BOTÓN WHATSAPP -->
 <a href="https://api.whatsapp.com/send?phone=51974848347" class="wsp-fijo" target="_blank">
 <i class="bi bi-whatsapp"></i>
 </a>
@@ -261,3 +281,12 @@ cerrarQR();
 
 </body>
 </html>
+<p style="
+font-size: 1.5rem;
+color: var(--oro);
+margin-top: 20px;
+font-weight: bold;
+animation: parpadeo 1s infinite;
+">
+🎉 SORTEO HOY DÍA 🎉
+</p>
