@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exquisite Jewels | Pago Seguro 2026</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+:root {
+--oro: #d4af37;
+--negro: #111;
+--wsp: #25d366;
+--yape: #74226c;
+--yape-azul: #00aae4;
+}
+
+body {
+font-family: 'Segoe UI', sans-serif;
+margin: 0;
+background: #fff;
+text-align: center;
+}
+
+header {
+background: var(--negro);
+color: #fff;
+padding: 50px 20px;
+border-bottom: 5px solid var(--oro);
+}
+
+h1 {
+font-size: 3rem;
+margin: 0;
+color: var(--oro);
+letter-spacing: 4px;
+}
+
+.container {
+max-width: 1100px;
+margin: auto;
+padding: 40px 20px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+}
+
+.card {
+border: 2px solid var(--oro);
+border-radius: 15px;
+overflow: hidden;
+padding-bottom: 20px;
+transition: 0.3s;
+}
+
+.card:hover {
+transform: scale(1.03);
+}
+
+.card img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+}
+
+.price {
+font-size: 2rem;
+color: var(--oro);
+font-weight: bold;
+margin: 15px 0;
+}
+
+.btn-abrir-qr {
+background: var(--yape-azul);
+color: white;
+border: none;
+padding: 15px;
+font-weight: bold;
+border-radius: 10px;
+cursor: pointer;
+font-size: 1.1rem;
+width: 85%;
+}
+
+/* MODAL */
+.modal {
+display: none;
+position: fixed;
+z-index: 2000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+background: white;
+margin: 5% auto;
+padding: 25px;
+border-radius: 20px;
+width: 90%;
+max-width: 350px;
+border: 5px solid var(--yape);
+position: relative;
+}
+
+.close {
+position: absolute;
+right: 15px;
+top: 5px;
+font-size: 35px;
+cursor: pointer;
+}
+
+.qr-img-real {
+width: 100%;
+max-width: 250px;
+margin: 15px auto;
+display: block;
+border-radius: 15px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.wsp-fijo {
+position: fixed;
+bottom: 25px;
+right: 25px;
+background: var(--wsp);
+color: white;
+width: 70px;
+height: 70px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 40px;
+text-decoration: none;
+}
+
+footer {
+background: var(--negro);
+color: white;
+padding: 40px;
+margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>EXQUISITE JEWELS</h1>
+<p>JOYERÍA DE LUJO • 2026</p>
+</header>
+
+<div class="container">
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1">
+<h2>COLLARES</h2>
+<div class="price">S/ 450.00</div>
+<button class="btn-abrir-qr" onclick="mostrarQR()">PAGAR POR YAPE</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589987607627-1bba1c45e3d6">
+<h2>ANILLOS</h2>
+<div class="price">S/ 1,200.00</div>
+<button class="btn-abrir-qr" onclick="mostrarQR()">PAGAR POR YAPE</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638">
+<h2>PULSERAS</h2>
+<div class="price">S/ 680.00</div>
+<button class="btn-abrir-qr" onclick="mostrarQR()">PAGAR POR YAPE</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b">
+<h2>DIJES</h2>
+<div class="price">S/ 250.00</div>
+<button class="btn-abrir-qr" onclick="mostrarQR()">PAGAR POR YAPE</button>
+</div>
+
+<!-- ARETES (ARREGLADO + QR AL LADO) -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b">
+<h2>ARETES</h2>
+<div class="price">S/ 320.00</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap;">
+  
+<button class="btn-abrir-qr" onclick="mostrarQR()" style="width:auto;">
+PAGAR POR YAPE
+</button>
+
+<!-- TU QR -->
+
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- MODAL -->
+<div id="miModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="cerrarQR()">&times;</span>
+<h2 style="color: var(--yape);">YAPE AQUÍ</h2>
+<p>Escanea el código para pagar</p>
+
+<img src="https://i.ibb.co/9mJGnR25/imagen.png" class="qr-img-real">
+
+<div style="font-size: 2rem; font-weight: bold; color: var(--yape);">
+974848347
+</div>
+
+<p><b>¡Luego envíanos tu captura!</b></p>
+
+<a href="https://api.whatsapp.com/send?phone=51974848347&text=Hola%20envio%20mi%20comprobante%20de%20Exquisite%20Jewels"
+target="_blank"
+style="background: var(--wsp); color: white; padding: 15px; display: block; border-radius: 12px; text-decoration: none;">
+<i class="bi bi-whatsapp"></i> ENVIAR CAPTURA
+</a>
+
+</div>
+</div>
+
+<a href="https://api.whatsapp.com/send?phone=51974848347" class="wsp-fijo" target="_blank">
+<i class="bi bi-whatsapp"></i>
+</a>
+
+<footer>
+<p>📍 Mariscal Castilla 721</p>
+<p>📱 WhatsApp: 974848347</p>
+<p>&copy; 2026 EXQUISITE JEWELS</p>
+</footer>
+
+<script>
+function mostrarQR() {
+document.getElementById("miModal").style.display = "block";
+}
+
+function cerrarQR() {
+document.getElementById("miModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+if (event.target == document.getElementById("miModal")) {
+cerrarQR();
+}
+}
+</script>
+
+</body>
+</html>
